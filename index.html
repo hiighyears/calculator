@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+</head>
+<body>
+   <script>
+    let variableone,operator,variabletwo;
+    variableone =  prompt("enter a number");
+    operator =  prompt("enter a operator");
+    variabletwo =  prompt("enter a number");
+    function operate(variableone,operator,variabletwo){
+        variableone = parseInt(variableone);
+        variabletwo = parseInt(variabletwo);
+        if(operator==='+')
+            return variableone+variabletwo;
+        
+        else if(operator==='-')
+            return variableone-variabletwo;
+        
+        else if(operator==='*')
+            return variableone*variabletwo;
+        
+        else if(operator==='/')
+            return variableone/variabletwo;
+        
+    }
+    console.log(operate(variableone,operator,variabletwo))    
+   </script> 
+</body>
+</html>
