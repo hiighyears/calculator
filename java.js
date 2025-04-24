@@ -7,20 +7,27 @@ let variableone,operator,variabletwo;
         variableone = parseInt(variableone);
         variabletwo = parseInt(variabletwo);
         if(operator==='+')
-            return variableone+variabletwo;
+            return display.textContent=variableone+variabletwo;
         
         else if(operator==='-')
-            return variableone-variabletwo;
+            return display.textContent=variableone-variabletwo;
         
         else if(operator==='*')
-            return variableone*variabletwo;
+            return display.textContent=variableone*variabletwo;
         
         else if(operator==='/')
-            return variableone/variabletwo;     
+            return display.textContent=variableone/variabletwo;
+        else if(operator==='%')
+            return display.textContent=variableone%variabletwo;     
     }
 
     function clearscreen(){
         display.textContent="0";
+        variableone='';
+        variabletwo='';
+        operator='';
+        // console.log(variableone,operator,variabletwo)
+    
     }
 
     function changesign(){
@@ -34,13 +41,12 @@ let variableone,operator,variabletwo;
     }
 
     function decimaloperator(dot){
-        for(i=0;i<display.length;i++){
-            if(display[i]=='.')
-                return;
-            else
-            display.textContent +=dot;
-
-        }
+        if(display.textContent.length>13){
+            return;}
+        for(i=0;i<display.textContent.length;i++){
+            if(display.textContent[i]=='.')
+                return;}
+        display.textContent +=dot;
     }
 
     function backspace(){
@@ -62,5 +68,41 @@ let variableone,operator,variabletwo;
 
     }}
 
-    // operate(variableone,operator,variabletwo); 
+    function addition(){
+        variableone = display.textContent
+        display.textContent = 0;
+        operator ="+"
+        // console.log(variableone,operator)
+    }
+    function subtraction(){
+        variableone = display.textContent
+        display.textContent = 0;
+        operator ="-"
+        // console.log(variableone,operator)
+    }
+    function multiplication(){
+        variableone = display.textContent
+        display.textContent = 0;
+        operator ="*"
+        // console.log(variableone,operator)
+    }
+    function divition(){
+        variableone = display.textContent
+        display.textContent = 0;
+        operator ="/"
+        // console.log(variableone,operator)
+    }
+    function modulas(){
+        variableone = display.textContent
+        display.textContent = 0;
+        operator ="%"
+        // console.log(variableone,operator)
+    }
+
+    function equals(){
+        variabletwo = display.textContent;
+        operate(variableone,operator,variabletwo); 
+
+    }
+
   
