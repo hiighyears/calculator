@@ -1,6 +1,5 @@
 const display = document.querySelector("#display");
-display.placeholder="0";
-
+ 
 
 let variableone,operator,variabletwo;
     function operate(variableone,operator,variabletwo){     
