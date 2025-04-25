@@ -4,6 +4,11 @@ body{
     background-color: #581845;
 }
 
+@font-face {
+    font-family:custompick;
+    src: url(fonts/3.ttf);
+}
+
 #container{
     display: flex;
     justify-content: center;
@@ -17,12 +22,13 @@ body{
     border-radius: 10px;
     border: solid 4px rgb(7, 6, 6);
 }
+@import url(fonts);
 
 #display {
     font-weight:bolder;
     color: maroon;
-    font-family: monospace;
-    font-size: 40px;
+    font-family:custompick;
+    font-size: 50px;
     width: 399px;
     background-color: #FFC300;
     display: flex ;
